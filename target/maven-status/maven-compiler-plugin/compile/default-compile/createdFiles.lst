@@ -1,0 +1,9 @@
+io/visualboard/jobuploader/EndpointWriter.class
+io/visualboard/jobuploader/JobUploader.class
+io/visualboard/jobuploader/JobUploaded.class
+io/visualboard/jobuploader/ClientJob.class
+io/visualboard/jobuploader/EndpointWriteResponse.class
+io/visualboard/jobuploader/EndpointReader.class
+io/visualboard/jobuploader/JobToUpload.class
+io/visualboard/jobuploader/EndpointReadResponse.class
+io/visualboard/jobuploader/EndpointWriteRequest.class
