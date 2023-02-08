@@ -1,9 +1,12 @@
 target/
 
+
 # Eclipse
 **/.classpath
 **/.project
 **/.settings/
 
 # IntelliJ
-out/
+.idea/
+.idea/**
+**/.idea
