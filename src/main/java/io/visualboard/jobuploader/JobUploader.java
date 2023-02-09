@@ -26,6 +26,9 @@ public class JobUploader {
             return;
         // Convert clientJobs to JobToUpload
         List<JobToUpload> jobsToUpload = clientJobs.stream().map(jobMapper).collect(toList());
+        jobsToUpload.forEach(job -> {
+            System.out.println("Reference: " + job.getReference() + " " + job.getOperationReference() + " " + job.getPartReference() + " " + job.getQuantity() + " " + job.getDisplayText());
+        });
         // Step two: Write job orders to VisualBoard endpoint
         writer.write(jobsToUpload, writeEndpoint, apiKey);
     }
@@ -37,6 +40,7 @@ public class JobUploader {
         jobToUpload.setOperationReference(clientJob.getCt());
         jobToUpload.setPartReference(clientJob.getnP());
         jobToUpload.setQuantity(new BigDecimal(clientJob.getOrderQuantity()));
+        jobToUpload.setDisplayText(clientJob.getSchedStart());
         return jobToUpload;
     };
 }
