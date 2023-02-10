@@ -23,6 +23,11 @@ public class JobToUpload {
     @JsonProperty("quantity")
     private BigDecimal quantity = BigDecimal.ZERO;
 
+    @JsonProperty("displayText")
+    private String displayText;
+
+
+
     public JobToUpload() {  }
 
     public String getReference() {
@@ -55,5 +60,13 @@ public class JobToUpload {
 
     public void setQuantity(BigDecimal quantity) {
         this.quantity = quantity;
+    }
+
+    public String getDisplayText() {
+        return displayText;
+    }
+
+    public void setDisplayText(String displayText) {
+        this.displayText = displayText;
     }
 }

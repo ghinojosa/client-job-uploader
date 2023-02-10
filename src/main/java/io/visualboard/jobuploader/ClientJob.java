@@ -35,6 +35,12 @@ public class ClientJob {
     @JsonProperty("Order_Quantity")
     private String orderQuantity;
 
+    /**
+     * Display text
+     */
+    @JsonProperty("Sched_Start")
+    private String schedStart;
+
     public ClientJob() { }
 
     public String getJob() {
@@ -67,5 +73,13 @@ public class ClientJob {
 
     public void setOrderQuantity(String orderQuantity) {
         this.orderQuantity = orderQuantity;
+    }
+
+    public String getSchedStart() {
+        return schedStart;
+    }
+
+    public void setSchedStart(String schedStart) {
+        this.schedStart = schedStart;
     }
 }
